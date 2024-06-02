@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domofday</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to my DOM.</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus culpa dicta inventore neque, eius, aperiam quis cum praesentium tempora optio voluptatem. Nemo pariatur quos culpa inventore at dolores, similique saepe itaque quo cum, doloribus repellat? Impedit rem maxime minima consectetur nihil, a officiis iste! Tempora, laboriosam et! Voluptas, quam reprehenderit!</p>
+
+    </header>
+    <main>
+        <section>
+            <h1>My Awesome DOM de baba</h1>
+        <ul>
+            <li>Jalali set</li>
+            <li>Shafayet</li>
+            <li>bonobash</li>
+            <li>DOm dere baba</li>
+        </ul>
+        <section class="fruits-countainer">
+            <h1 id="fruits-title">Fruits I like</h1>
+          <ul>
+            <li>apple</li>
+            <li>banana</li>
+            <li>ornge</li>
+        </ul>  
+         </section>
+        </section>
+        <section>
+            <h1 id="places-title">Places I like to visit</h1>
+            <ul>
+                <li class="important-places">sonderbon</li>
+                <li class="important-places">bandorbon</li>
+                <li class="important-places">katabon</li>
+                <li class="important-places">shalbon</li>
+            </ul>
+        </section>
+    </main>
+    <script src="js/dom.js"></script>
+    <script>
+        const licllection = document.getElementsByTagName('li');
+        // console.log(licllection);
+        for(const li of licllection){
+            // console.log(li.innerText);
+        }
+        // option-1: getElementsByTagName
+        const allHeadings = document.getElementsByTagName('h1');
+        for(const h1 of allHeadings){
+            // console.log(h1.innerText);
+        }
+        
+        // option-2: getElementById
+        const fruitsTitle = document.getElementById('fruits-title');
+        // fruitsTitle.innerText = 'Fruits changed by JS';
+        
+        // option-3: getElementsByClassName
+        const places = document.getElementsByClassName('important-placse');
+        for(const place of places){
+            // console.log(place.innerText);
+        }
+
+        // option-4: querySelectior
+        // const someLis = document.querySelector('.fruits-countainer li');
+        // console.log(someLis);
+        
+        // option-5: querySelectorAll
+        const someLi = document.querySelectorAll('.fruits-countainer li');
+        // console.log(someLi);
+        for(const li of someLi){
+            console.log(li.innerText);
+        }
+
+
+    </script>
+</body>
+</html>
